@@ -1,0 +1,141 @@
+/* Xóa mấy cái lề mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-bar {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* Để mobile không bị vỡ */
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; /* Độ rộng ô tìm kiếm */
+}
+
+/* Phần quan trọng: CSS Grid để chia cột */
+.grid-list {
+    display: grid;
+    /* Dòng này tự động chia cột: nhỏ nhất 250px, còn dư thì dãn ra */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px;
+}
+
+/* Giao diện từng thẻ sản phẩm */
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Hiệu ứng bay lên nhẹ khi di chuột */
+}
+
+.card img {
+    height: 150px;
+    object-fit: contain; /* Giữ ảnh không bị méo */
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    /* Giới hạn tên dài quá thì cắt bớt */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.price {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* CSS cho Modal (Popup) */
+.modal {
+    display: none; /* Mặc định ẩn */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Nền tối mờ */
+    z-index: 100;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-body {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.modal-body img {
+    max-width: 200px;
+}
+
+/* CSS cho mobile: modal dọc xuống */
+@media (max-width: 600px) {
+    .modal-body {
+        flex-direction: column;
+        text-align: center;
+    }
+}
