@@ -1,4 +1,3 @@
-/* Xóa mấy cái lề mặc định */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,7 @@
 }
 
 body {
-    background-color: #f0f2f5;
+    background-color: #336fc8;
     padding: 20px;
 }
 
@@ -26,27 +25,26 @@ header {
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap; /* Để mobile không bị vỡ */
+    flex-wrap: wrap;
 }
 
 input, select {
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     border-radius: 5px;
-    width: 300px; /* Độ rộng ô tìm kiếm */
+    width: 300px; 
 }
 
-/* Phần quan trọng: CSS Grid để chia cột */
+
 .grid-list {
     display: grid;
-    /* Dòng này tự động chia cột: nhỏ nhất 250px, còn dư thì dãn ra */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
     gap: 20px;
 }
 
-/* Giao diện từng thẻ sản phẩm */
+
 .card {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 15px;
     border-radius: 8px;
     text-align: center;
@@ -55,19 +53,19 @@ input, select {
 }
 
 .card:hover {
-    transform: translateY(-5px); /* Hiệu ứng bay lên nhẹ khi di chuột */
+    background: rgb(75, 168, 162);
+    transform: translateY(-5px); 
 }
 
 .card img {
     height: 150px;
-    object-fit: contain; /* Giữ ảnh không bị méo */
+    object-fit: contain; 
     margin-bottom: 10px;
 }
 
 .card h3 {
     font-size: 16px;
     margin-bottom: 5px;
-    /* Giới hạn tên dài quá thì cắt bớt */
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -75,15 +73,15 @@ input, select {
 }
 
 .price {
-    color: red;
+    color: rgb(12, 153, 38);
     font-weight: bold;
     font-size: 18px;
     margin: 10px 0;
 }
 
 .btn {
-    background-color: #007bff;
-    color: white;
+    background-color: #d44a4a;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 8px 15px;
     border-radius: 4px;
@@ -91,21 +89,22 @@ input, select {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #1b1b1b;
+    color: #d44a4a;
 }
 
-/* CSS cho Modal (Popup) */
+
 .modal {
-    display: none; /* Mặc định ẩn */
+    display: none;
     position: fixed;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.5); /* Nền tối mờ */
+    background-color: rgba(0,0,0,0.5);
     z-index: 100;
 }
 
 .modal-content {
-    background: white;
+    background: rgb(255, 255, 255);
     width: 90%;
     max-width: 700px;
     margin: 50px auto;
@@ -132,7 +131,7 @@ input, select {
     max-width: 200px;
 }
 
-/* CSS cho mobile: modal dọc xuống */
+
 @media (max-width: 600px) {
     .modal-body {
         flex-direction: column;
