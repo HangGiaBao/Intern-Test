@@ -37,5 +37,7 @@ P5: Các chức năng khác
 - Gặp khó khăn trong việc lấy dữ liệu từ API, Khi làm HTML/CSS trước nên khi lấy API cần phải chỉnh sửa giao diện liên tục 
 - Khó khăn trong việc lọc tìm kiếm bằng chữ hoa và chữ thường
 - Mất nhiều thời gian để chỉnh sửa giao diện sao cho cho phù hợp và đúng với yêu cầu
+
+
 **DeadLine**
 16:34 26/11/2025
